@@ -427,3 +427,27 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Environment variables
+.env
+*.env
+
+# Docker image exports
+*.tar
+
+# Node / Vue
+frontend/node_modules/
+frontend/dist/
+
+# Python / Flask
+backend/__pycache__/
+backend/**/*.pyc
+backend/venv/
+backend/.venv/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
