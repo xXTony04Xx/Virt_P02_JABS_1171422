@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: proyecto-v-jabs-frontend:v2
-          imagePullPolicy: IfNotPresent
+          image: us-central1-docker.pkg.dev/virtualizacionjabs1171422/repo-virtualizacion/frontend:1.0
           ports:
             - containerPort: 80
 ---
@@ -26,10 +25,10 @@ kind: Service
 metadata:
   name: frontend-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: frontend
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30300           # acceso: http://localhost:30300
+      #nodePort: 30300           # acceso: http://localhost:30300

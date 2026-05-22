@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: proyecto-v-jabs-backend:v2
-          imagePullPolicy: IfNotPresent
+          image: us-central1-docker.pkg.dev/virtualizacionjabs1171422/repo-virtualizacion/backend:1.0
           ports:
             - containerPort: 5000
           envFrom:
@@ -29,7 +28,7 @@ kind: Service
 metadata:
   name: backend-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: backend
   ports:
