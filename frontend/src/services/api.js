@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:30500'
+const API_URL = 'http://35.232.39.106'
 
 export async function loginUser(credentials) {
 
